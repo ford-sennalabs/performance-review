@@ -5,10 +5,12 @@
  */
 export function shuffle(cards) {
 
-  const pickCards = cards.slice(0,4);
-  cards.splice(4,cards.length-1);
+  const oldCards = [...cards]
+
+  const pickCards = oldCards.slice(0,4);
+  oldCards.splice(0,4);
 
 
-  return cards.concat(pickCards);
+  return oldCards.concat(pickCards);
 }
 

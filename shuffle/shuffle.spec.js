@@ -6,6 +6,9 @@ describe("shuffle", () => {
   it("should have the same card size", () => {
     const result = shuffle(cards);
 
+    console.log('result',result)
+    console.log('cards',cards)
+
     expect(result.length).toBe(cards.length);
   });
 
