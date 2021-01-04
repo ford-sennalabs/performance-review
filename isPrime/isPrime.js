@@ -3,5 +3,7 @@ export function isPrime(num) {
     throw new Error('Not Integer number');
   }
   const sqrtNum = Math.sqrt(num);
-  for(let n = 2; n <= sqrtNum; n++){}
+  for(let n = 2; n <= sqrtNum; n++)
+    if(num % n === 0) return false;
+  return num > 1;
 }
