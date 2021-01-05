@@ -23,4 +23,19 @@ export function findCognitiveFunction(mbti) {
   };
 
 
+
+  const firstAlphabet = mbti[0];
+  const firstFuncAlphabet = mbti[1];
+  const secondFuncAlphabet = mbti[2];
+  const attitudesAlphabet = mbti[3];
+
+  let extrovertedFunction;
+  let introvertedFunction;
+
+  let dominantFunction;
+  let auxiliaryFunction;
+
+  let inferiorFunction;
+  let tertiaryFunction;
+
 }
