@@ -61,4 +61,13 @@ export function findCognitiveFunction(mbti) {
     auxiliaryFunction = extrovertedFunction;
   }
 
+  inferiorFunction = flipString(dominantFunction);
+  tertiaryFunction = flipString(auxiliaryFunction);
+
+  return {
+    dominant: dominantFunction,
+    auxiliary: auxiliaryFunction,
+    tertiary: tertiaryFunction,
+    inferior: inferiorFunction,
+  };
 }
