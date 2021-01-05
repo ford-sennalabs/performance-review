@@ -6,6 +6,8 @@ describe("findCognitiveFunction", () => {
 
     const result = findCognitiveFunction(mbti);
 
+    console.log('result',result)
+
     const expectedResult = {
       dominant: "Si",
       auxiliary: "Te",

@@ -8,5 +8,8 @@
  * }}
  */
 export function findCognitiveFunction(mbti) {
-  throw new Error("Not implemented");
+  if (mbti.length > 4) {
+    throw new Error("It is not a MBTI code.");
+  }
+
 }
