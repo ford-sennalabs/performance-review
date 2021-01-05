@@ -53,4 +53,12 @@ export function findCognitiveFunction(mbti) {
     introvertedFunction = firstFuncAlphabet + "i";
   }
 
+  if (extrovertedFunction[1].toLowerCase() === firstAlphabet.toLowerCase()) {
+    dominantFunction = extrovertedFunction;
+    auxiliaryFunction = introvertedFunction;
+  } else {
+    dominantFunction = introvertedFunction;
+    auxiliaryFunction = extrovertedFunction;
+  }
+
 }
