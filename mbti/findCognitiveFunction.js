@@ -22,7 +22,14 @@ export function findCognitiveFunction(mbti) {
     p: "j",
   };
 
+  function flipString(funcString) {
+    const firstFlipString = flipMBTIAlphabet[
+      funcString[0].toLowerCase()
+    ].toUpperCase();
+    const secondFlipString = flipMBTIAlphabet[funcString[1].toLowerCase()];
 
+    return firstFlipString + secondFlipString;
+  }
 
   const firstAlphabet = mbti[0];
   const firstFuncAlphabet = mbti[1];
@@ -37,5 +44,13 @@ export function findCognitiveFunction(mbti) {
 
   let inferiorFunction;
   let tertiaryFunction;
+
+  if (attitudesAlphabet.toLowerCase() === "p") {
+    extrovertedFunction = firstFuncAlphabet + "e";
+    introvertedFunction = secondFuncAlphabet + "i";
+  } else if (attitudesAlphabet.toLowerCase() === "j") {
+    extrovertedFunction = secondFuncAlphabet + "e";
+    introvertedFunction = firstFuncAlphabet + "i";
+  }
 
 }
